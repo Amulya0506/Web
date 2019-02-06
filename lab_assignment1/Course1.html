@@ -1,0 +1,21 @@
+
+<HTML>
+ <script type="text/javascript">
+    var clicks = 24;
+    function onClick() {
+        clicks =clicks-1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+<br>
+    <p id="demo">Thank you for registering course Remaining Seats avaliable in this course : <a id="clicks">23</a></p>
+<br>
+<br>
+   <center> Name: <input type="text" id="name1" value="name1"></center>
+<br>
+<br>
+   <center> Id: <input type="text" id="name2" value="name2"></center>
+<br>
+<br>
+    <center><button type="button" onClick="onClick()">Register</button></center>
+</HTML>

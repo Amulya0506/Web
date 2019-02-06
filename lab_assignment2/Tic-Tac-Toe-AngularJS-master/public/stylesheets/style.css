@@ -1,0 +1,146 @@
+
+body 
+{
+  background-color:#E8E8E4;
+
+}
+
+
+
+#container {
+
+  width: 1028px;
+  height: 100%;
+  position: absolute;
+
+}
+
+
+.game-board {
+  position: absolute;
+  top: 10px;
+  right: 400px;
+  height: 600px;
+  width: 615px;
+
+}
+
+
+.square-div {
+  float: left;
+  height: 172px;
+  width: 168px;
+
+
+}
+
+
+.left {
+  border-right: 15px;
+  border-right-color: black;
+  
+border-right-style: solid;
+
+}
+
+
+.middle {
+  border-right: 15px;
+  border-right-color:black;
+  
+border-right-style: solid;
+
+}
+
+
+.not-bottom {
+  border-bottom: 15px;
+  border-bottom-color: black;
+  
+border-bottom-style: solid;
+
+}
+
+
+#about-div {
+  position: absolute;
+  height: 130px;
+  width: 200px;
+  right: 240px;
+  top: 70px;
+  background-color: darkblue;
+  color: slateblue;
+
+}
+
+
+#text-div {
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  right: 240px;
+  top: 200px;
+  background-color: white;
+
+}
+
+
+#new-game-div {
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  right: 240px;
+  top: 300px;
+  background-color: white;
+
+}
+
+
+.new-game-button {
+  margin-top: 10px;
+  margin-left: 57px;
+  padding: 5px;
+  background-color: white;
+  border-color: white;
+
+}
+
+
+.top-text{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0px;
+  margin-top: 12px;
+
+}
+
+
+.bottom-text {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 6px;
+  word-wrap: break-word;
+  
+margin-bottom: 0px;
+
+}
+
+
+.bottom-text>a {
+  text-decoration: none;
+  color: white;
+
+}
+
+
+.middle-text{
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+
+.radio-buttons {
+  padding-left: 3px;
+  padding-top: 4px;
+}

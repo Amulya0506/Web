@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<br>
+<center><h2>Registration</h2></center>
+<br><br>
+<center><select name="career option" id="course">
+ <option value="computers" id="computer" name="computer">Computer Science </option>
+   <option value="electronics" id="electronics">Electrical and Electronics</option>
+  <option value="law" id="law">Law</option>
+  </select>
+</center>
+<br>
+  <br>
+ <center><select name="Education">
+<option value="masters">Masters</option>
+<option value="bachelors">Bachelors</option>
+ <option value="">High School</option>
+  </select>
+</center>
+<br>
+<br>
+<center><select name="semester">
+<option value="spring">spring</option>
+<option value="fall">fall</option>
+<option value="summer">summer</option>
+  </select>
+</center>
+  <br>
+<br>
+  <center><button id="Submitbtn" class="float-left submit-button" >Submit</button></center>
+
+
+<script type="text/javascript">
+   document.getElementById("Submitbtn").onclick = function () 
+     {
+	var e = document.getElementById("course");
+        var strUser = e.options[e.selectedIndex].value;
+        alert(strUser);
+        if (strUser=="computers")
+  	    {
+              var x=document.getElementById("computer").value;
+              //alert(x);
+              location.href = "Instructor.html";
+            }
+	else if (strUser=="electronics")
+	    {
+		var x=document.getElementById("electronics").value;
+		//alert(x);
+  		location.href = "professor.html";
+             }   
+     };
+</script>
+</body>
+</html>

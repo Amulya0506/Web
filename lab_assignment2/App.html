@@ -1,0 +1,100 @@
+﻿<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+ <html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+</style>
+</head>
+<body>
+<h1>BBC NEWS</h1>
+<ul>
+  <li><a href="#home">Home</a></li>
+ <li><a href="video.html">video</a></li>
+ <li><a href="#world">World</a></li>
+ <li><a href="us.html">Us & Canada</a></li>
+  <li><a href="#uk">Uk</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#sport">Sport</a></li>
+  <li><a href="#weather">Weather</a></li>
+ <li><a href="#business">Business</a></li>
+ <li><a href="#tech">Tech</a></li>
+ <li><a href="#sciences">Science</a></li>
+ <li><a href="sign_in.html">Sign Up</a></li>
+</a>
+</ul>
+ <div ng-app="myApp" ng-controller="myCtrl" class="panel panel-primary" style="width:800px;">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">News Topic</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-inline">
+                    <input type="text" class="form-control" name="search" placeholder="Enter Topic.." data-ng-model="search"/>
+                   
+					<button name="search" class="btn btn-primary" data-ng-click="getNews()">Get News</button> 
+                                        //<span ng-show="panel panel-primary.search.$error.text"></span>
+
+				</div>
+					<table class="table table-bordred table-striped" class="table table-hover">
+                        <tr>
+                            <td class="info">{{txt}}</td>
+                        </tr>
+						 <tr>
+                           <td class="info">{{url}}</td>
+						   
+                        </tr>
+		         <tr>	    
+
+						<td class="info">{{urlToImage}}</td>
+                        </tr>
+					</table>
+			</div>
+</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>	
+			<script>
+
+				var app = angular.module('myApp', []);
+				app.controller('myCtrl', function($scope,$http) {
+		$scope.getNews = function () {
+		 $http.get('https://newsapi.org/v2/top-headlines?q='+ $scope.search +'&apiKey=347fa40c0b8a428b8ee6447d31e46d5a').success(function (data) {
+		
+				console.log(data);
+                $scope.txt=data.articles[0].description;
+                $scope.txt=data.articles[2].description;
+				$scope.url=data.articles[0].url;
+				$scope.urlToImage=data.articles[0].urlToImage;
+				$scope.urlToImage=data.articles[2].urlToImage;
+					});
+					};
+					});
+		</script
+</body>
+
+</html>
